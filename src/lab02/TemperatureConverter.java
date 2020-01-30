@@ -15,7 +15,7 @@ public class TemperatureConverter {
 
             int len = (temp.length() - 1);
             temp = temp.substring(0, len);
-            int tempF = Integer.parseInt(temp); // Converts string temp into an integer
+            double tempF = Double.parseDouble(temp); // Converts string temp into an integer
 
             // Convert Fahrenheit to Celsius
             double celsius = (5.0 / 9) * (tempF - 32);
@@ -26,7 +26,7 @@ public class TemperatureConverter {
 
             int len = (temp.length() -1);
             temp = temp.substring(0, len);
-            int tempC = Integer.parseInt(temp); // Converts string temp into an integer
+            double tempC = Double.parseDouble(temp); // Converts string temp into an integer
 
             // Convert Celsius to Fahrenheit
             double fahrenheit = (tempC * 9.0 / 5) + (32);
