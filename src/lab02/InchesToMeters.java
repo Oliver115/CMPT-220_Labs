@@ -1,3 +1,6 @@
+// CMPT220
+// Oliver Wilson
+
 package lab02;
 import java.util.Scanner;
 
@@ -16,6 +19,6 @@ public class InchesToMeters {
         double result = (inches * METERS_PER_INCH);
 
         // Show results
-        System.out.println((int)(inches) + " Inches is " + (int)(result) + " Meters!");
+        System.out.println((int)(inches) + " Inches is: " + (int)(result) + " Meters!");
     }
 }
