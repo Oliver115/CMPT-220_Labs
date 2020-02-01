@@ -5,6 +5,10 @@ package lab02;
 import java.util.Scanner;
 
 public class TemperatureConverter {
+    /**
+     * main method to test implementation for the convert method
+     * @param args
+     */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in); // Create Scanner
 

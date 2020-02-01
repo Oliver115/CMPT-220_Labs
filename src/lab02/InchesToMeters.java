@@ -5,6 +5,10 @@ package lab02;
 import java.util.Scanner;
 
 public class InchesToMeters {
+    /**
+     * main method to test implementation for the convert method
+     * @param args
+     */
     public static void main(String[] args) {
 
         // Constant
