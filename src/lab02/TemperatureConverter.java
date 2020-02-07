@@ -16,6 +16,7 @@ public class TemperatureConverter {
         System.out.println("Enter 'F' for Fahrenheit or 'C' for Celsius\n Example: 35F or 56C ");
         System.out.println("\nEnter temperature you want to convert: ");
         String initialTemperature = input.next();
+        initialTemperature = initialTemperature.toUpperCase();
 
         // Temperature Converter from Fahrenheit to Celsius
         if (initialTemperature.endsWith("F")) {
