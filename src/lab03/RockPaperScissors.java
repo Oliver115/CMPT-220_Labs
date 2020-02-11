@@ -49,13 +49,13 @@ public class RockPaperScissors {
 
         if (userScore > computerScore)
             System.out.println("====================================\n" +
-                    "**END RESULTS**\nYOU WIN! THE GAME!!");
+                    "**END RESULTS**\nUser: " + userScore + "\nComputer: " + computerScore +"\nYOU WIN! THE GAME!!");
         else if (userScore < computerScore)
             System.out.println("====================================\n" +
-                    "**END RESULTS**\nYOU LOSE!! COMPUTER WINS!!");
+                    "**END RESULTS**\nUser: " + userScore + "\nComputer: " + computerScore + "\nYOU LOSE!! COMPUTER WINS!!");
         else
             System.out.println("====================================\n" +
-                    "**END RESULTS**\nDRAW!!");
+                    "**END RESULTS**\nUser: " + userScore + "\nComputer: " + computerScore + "\nDRAW!!");
     }
 
     public static String calculateWinner (String userChoice, String randomChoice) {
