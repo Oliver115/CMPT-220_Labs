@@ -2,11 +2,12 @@
 // Oliver Wilson
 
 package lab03;
+
 import java.util.Scanner;
 
 public class RockPaperScissors {
     /**
-     * main method to test implementation for the convert method
+     * main method of a Rock, Paper, Scissors game.
      * @param args
      */
     public static void main(String[] args) {
@@ -38,8 +39,8 @@ public class RockPaperScissors {
                 // If user input is valid. Prints results
                 System.out.println("Computer entered: " + randomNumber +
                         "\nResult: " + calculateWinner(userMove, randomNumber));
-
             counter += 1; // Adds 'one' to the count.
+
 
             if (calculateWinner(userMove, randomNumber).equals("point awarded to user"))
                 userScore++; // If user wins, a point is added to the user's total score

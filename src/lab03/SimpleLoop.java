@@ -5,7 +5,7 @@ package lab03;
 
 public class SimpleLoop {
     /**
-     * main method to test implementation for the convert method
+     * main method that prints all the numbers from 0 - 50.
      * @param args
      */
     public static void main(String[] args) {

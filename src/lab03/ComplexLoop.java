@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class ComplexLoop {
     /**
-     * main method to test implementation for the convert method
+     * main method that calculates the return investment based on 'annual percentage' and 'number of months.'
      * @param args
      */
     public static void main(String[] args) {
@@ -30,8 +30,8 @@ public class ComplexLoop {
 
         }
         // Print the return investment after x months
-        System.out.println("\nYour return investment for $" + (int)(userInitialDeposit) +
+        System.out.println("\nYour return investment for $" + (float)(userInitialDeposit) +
                 " in " + (int)(maturity) + " months\nwith a annual percentage yield of "
-                + annualPercentage + "% will be: $" + (int)(returnMoney));
+                + annualPercentage + "% will be: $" + (float)(returnMoney));
     }
 }

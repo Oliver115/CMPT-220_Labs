@@ -5,7 +5,7 @@ package lab03;
 
 public class NestedLoops {
     /**
-     * main method to test implementation for the convert method
+     * main method that prints a fancy figure
      * @param args
      */
     public static void main(String[] args) {
