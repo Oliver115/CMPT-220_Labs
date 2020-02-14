@@ -10,29 +10,29 @@ public class ChineseZodiac {
         int userYear = input.nextInt();
 
         switch (userYear % 12) {
-            case 0: System.out.println("Monkey");
+            case 0: System.out.println(userYear + " is: Monkey");
                 break;
-            case 1: System.out.println("Rooster");
+            case 1: System.out.println(userYear + " is: Rooster");
                 break;
-            case 2: System.out.println("Dog");
+            case 2: System.out.println(userYear + " is: Dog");
                 break;
-            case 3: System.out.println("Pig");
+            case 3: System.out.println(userYear + " is: Pig");
                 break;
-            case 4: System.out.println("Rat");
+            case 4: System.out.println(userYear + " is: Rat");
                 break;
-            case 5: System.out.println("Ox");
+            case 5: System.out.println(userYear + " is: Ox");
                 break;
-            case 6: System.out.println("Tiger");
+            case 6: System.out.println(userYear + " is: Tiger");
                 break;
-            case 7: System.out.println("Rabbit");
+            case 7: System.out.println(userYear + " is: Rabbit");
                 break;
-            case 8: System.out.println("Dragon");
+            case 8: System.out.println(userYear + " is: Dragon");
                 break;
-            case 9: System.out.println("Snake");
+            case 9: System.out.println(userYear + " is: Snake");
                 break;
-            case 10: System.out.println("Horse");
+            case 10: System.out.println(userYear + " is: Horse");
                 break;
-            case 11: System.out.println("Sheep");
+            case 11: System.out.println(userYear + " is: Sheep");
                 break;
 
             default: System.out.println("Error! Please try again"); // In case of error
