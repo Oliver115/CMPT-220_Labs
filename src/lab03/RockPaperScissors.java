@@ -35,6 +35,7 @@ public class RockPaperScissors {
             if ((!userMove.equals(moves[0]) && !userMove.equals(moves[1])) && !userMove.equals(moves[2])) {
                 System.out.println("Incorrect Input!\nPlease try again!");
             }
+
             else
                 // If user input is valid. Prints results
                 System.out.println("Computer entered: " + randomNumber +
@@ -50,13 +51,13 @@ public class RockPaperScissors {
 
         if (userScore > computerScore)
             System.out.println("====================================\n" +
-                    "**END RESULTS**\nUser: " + userScore + "\nComputer: " + computerScore +"\nYOU WIN! THE GAME!!");
+                    "\n**END RESULTS**\nUser: " + userScore + "\nComputer: " + computerScore +"\nYOU WIN! THE GAME!!");
         else if (userScore < computerScore)
             System.out.println("====================================\n" +
-                    "**END RESULTS**\nUser: " + userScore + "\nComputer: " + computerScore + "\nYOU LOSE!! COMPUTER WINS!!");
+                    "\n**END RESULTS**\nUser: " + userScore + "\nComputer: " + computerScore + "\nYOU LOSE!! COMPUTER WINS!!");
         else
             System.out.println("====================================\n" +
-                    "**END RESULTS**\nUser: " + userScore + "\nComputer: " + computerScore + "\nDRAW!!");
+                    "\n**END RESULTS**\nUser: " + userScore + "\nComputer: " + computerScore + "\nDRAW!!");
     }
 
     public static String calculateWinner (String userChoice, String randomChoice) {
