@@ -15,7 +15,7 @@ public class InchesToMeters {
         final double METERS_PER_INCH = 0.0254;
 
         // Prompt user for distance in inches
-        System.out.println("Enter distance in inches: ");
+        System.out.print("Enter distance in inches: ");
         Scanner input = new Scanner(System.in);
         double inches = input.nextDouble();
 
@@ -23,6 +23,6 @@ public class InchesToMeters {
         double result = (inches * METERS_PER_INCH);
 
         // Show results
-        System.out.println((int)(inches) + " Inches is: " + (int)(result) + " Meters!");
+        System.out.println((inches) + " Inches is: " + (result) + " Meters!");
     }
 }

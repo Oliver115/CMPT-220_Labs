@@ -6,7 +6,7 @@ package lab03;
 public class SimpleLoop {
     /**
      * main method that prints all the numbers from 0 - 50.
-     * @param args
+     * @param args .
      */
     public static void main(String[] args) {
 

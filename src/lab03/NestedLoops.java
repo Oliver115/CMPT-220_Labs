@@ -6,10 +6,11 @@ package lab03;
 public class NestedLoops {
     /**
      * main method that prints a fancy figure
-     * @param args
+     * @param args .
      */
     public static void main(String[] args) {
 
+        // I'm sorry for not commenting, I don't know how to comment this code :(
         int controlValue = 5;
         for (int count1 = 1; controlValue >= 1; count1++) {
             int number = 1;

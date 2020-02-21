@@ -2,13 +2,12 @@
 // Oliver Wilson
 
 package lab03;
-
 import java.util.Scanner;
 
 public class RockPaperScissors {
     /**
      * main method of a Rock, Paper, Scissors game.
-     * @param args
+     * @param args .
      */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in); // Create Scanner
@@ -60,16 +59,16 @@ public class RockPaperScissors {
                     "\n**END RESULTS**\nUser: " + userScore + "\nComputer: " + computerScore + "\nDRAW!!");
     }
 
+    /**
+     * This method calculates the result for a rock, paper, scissors game,
+     * it takes two parameters, then compares both of them and returns the outcome.
+     *
+     * @param userChoice = The choice made by the user.
+     * @param randomChoice = The choice of the computer made at random.
+     *
+     * @return String, stating Win, Draw, or Lose.
+     */
     public static String calculateWinner (String userChoice, String randomChoice) {
-        /**
-         * This method calculates the result for a rock, paper, scissors game,
-         * It takes two parameters, then compares both and returns the outcome.
-         *
-         * @param userChoice = The choice made by the user.
-         * @param randomChoice = The choice of the computer made at random.
-         *
-         * @return String, stating Win, Draw, or Lose.
-         */
         // Cases for user to win
         if (userChoice.equals("rock") && randomChoice.equals("scissors"))
             return "point awarded to user";
