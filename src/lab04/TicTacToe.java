@@ -42,6 +42,21 @@ public class TicTacToe {
 
     private static boolean hasBlanks(String[][] board) { /* TODO: develop method which checks for blanks. */
         boolean flag = false;
+        int thereIsAWinner = 0;
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if ((board[i][j].equals(board[i][j])) && (board[i][j].equals(board[i][j])));
+                thereIsAWinner = 1;
+            }
+        }
+
+        if
+
+
+
+
+
         int spaceAvailable = 0;
 
         for (int i = 0; i < 3; i++) {
