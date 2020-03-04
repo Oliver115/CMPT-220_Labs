@@ -14,6 +14,7 @@ public class TicTacToe {
                 board[r][c] = " ";
             }
         }
+         printWelcomeMessage(); // Prints welcome message.
 
         // Initialize player. (Player 1 always starts first)
         int player = 1;
@@ -53,17 +54,20 @@ public class TicTacToe {
         returnWinner[0] = " "; // Initial value is blank because no one has won yet.
 
         // Checks if player 1 has won.
-        if (checkRows(board, "X") || checkColumns(board, "X") || checkDiagonals(board, "X")) {
+        if (checkRows(board, "X") || checkColumns(board, "X")
+                || checkDiagonals(board, "X")) {
             returnWinner[0] = "1"; // player 1 won the game.
             returnWinner[1] = "false"; // There are no more spaces available because a player has won the game.
         }
         // Checks if player 2 has won.
-        else if (checkRows(board, "O") || checkColumns(board, "O") || checkDiagonals(board, "O")) {
+        else if (checkRows(board, "O") || checkColumns(board, "O")
+                || checkDiagonals(board, "O")) {
             returnWinner[0] = "2"; // player 2 won the game.
             returnWinner[1] = "false"; // There are no more spaces available because a player has won the game.
         }
         // Game is a Draw.
-        else if (checkIfSlotsAvailable(board) < 1) { // If there are no more slots available and no player has won. The game is a draw.
+        // If there are no more slots available and no player has won. The game is a draw.
+        else if (checkIfSlotsAvailable(board) < 1) {
             returnWinner[0] = "0"; // No player has won. Value is assigned '0'.
             returnWinner[1] = "false"; // There are no more slots available.
         }
@@ -153,10 +157,12 @@ public class TicTacToe {
         boolean doesWinnerExist = false; // before method checks for winner, no winner exists.
 
             // Check for winner in diagonals
-            if (board[0][0].equals(playerSign) && board[1][1].equals(playerSign) && board[2][2].equals(playerSign)) {
+            if (board[0][0].equals(playerSign) && board[1][1].equals(playerSign)
+                    && board[2][2].equals(playerSign)) {
                 doesWinnerExist = true; // If all slots match, winner exists.
             }
-            else if (board[0][2].equals(playerSign) && board[1][1].equals(playerSign) && board[2][0].equals(playerSign)) {
+            else if (board[0][2].equals(playerSign) && board[1][1].equals(playerSign)
+                    && board[2][0].equals(playerSign)) {
                 doesWinnerExist = true; // If all slots match, winner exists.
             }
         return doesWinnerExist; // Returns if player exists or not.
@@ -168,7 +174,7 @@ public class TicTacToe {
      */
     private static void printBoard(String[][] board) {
         // Prints game board.
-        System.out.println("+---+---+---+"); // Prints top border of the game board.
+        System.out.println("\n+---+---+---+"); // Prints top border of the game board.
         for (int i = 0; i < 3; i++) { // Starts a new row.
             System.out.print("| "); // Prints first lef border of each row.
             for (int j = 0; j < 3; j++) {
@@ -186,7 +192,7 @@ public class TicTacToe {
     private static int[] getPlayerMove(int player) {
         // Gets players move.
         Scanner input = new Scanner(System.in); // Create scanner.
-        int[] playerCoordinates = new int[2]; // Create an array to hold the 'row' and 'column' selection from the player.
+        int[] playerCoordinates = new int[2]; // Create an array to hold the 'row' and 'column' from the player.
         boolean flag = true; // Control value.
 
         while (flag) {
@@ -198,11 +204,16 @@ public class TicTacToe {
 
             // Check if player entered valid input.
             // If player entered invalid input, make player select again.
-            if (playerCoordinates[0] > 3 || playerCoordinates[1] > 3) {
+            if (playerCoordinates[0] >= 3 || playerCoordinates[1] >= 3) {
                 System.out.println("Value out of range! Enter row and column again!\n");
                 continue;
             }
-            flag = false; // Player has chosen valid input.
+            // If player enters a negative number
+            else if (playerCoordinates[0] < 0 || playerCoordinates[1] < 0) {
+                System.out.println("Why would you enter a NEGATIVE number! Enter row and column again!\n");
+                continue;
+            }
+            flag = false;
         }
         return playerCoordinates; // Return player's 'row' and 'column' selections.
     }
@@ -229,7 +240,8 @@ public class TicTacToe {
 
         boolean isSlotFree = true; // Checks if player's selected slot is available.
         if (board[row][column].equals(oppositePlayerSign)) { // If slot is already taken.
-            System.out.println("Slot is already taken.\nPlease look closely at the board and choose a different slot!\n");
+            System.out.println("Slot is already taken.\nPlease look closely at the board and" +
+                    " choose a different slot!");
             isSlotFree = false; // The slot is already taken.
         }
         else {
@@ -241,8 +253,9 @@ public class TicTacToe {
 
     /** Method that prints welcome message */
     private static void printWelcomeMessage() {
-        System.out.println();
-
+        System.out.println("Welcome to TicTacToe!\nPlayers must enter values between (0 - 2)\n" +
+                "Player 1 is --> 'X'\nPlayer 2 is --> 'O'\nEnjoy the game" +
+                " and May the Odds be Even in Your Favor");
     }
 
     /**
@@ -252,11 +265,11 @@ public class TicTacToe {
     private static void printFinalMessage(int winner) {
         // Print result message.
         switch (winner) { // Who won the game.
-            case 0: System.out.println("The Game is Even Steven!"); // The game was a draw.
+            case 0: System.out.println("The Game is Even Steven! Both players LOSE!"); // The game was a draw.
                 break;
-            case 1: System.out.println("Player 1 Wins!"); // Player 1 wins/
+            case 1: System.out.println("TicTacToe!!!! Player 1 Wins! CONGRATULATIONS!"); // Player 1 wins/
                 break;
-            case 2: System.out.println("Player 2 Wins!"); // Player 2 wins
+            case 2: System.out.println("TicTacToe!!!! Player 2 Wins! CONGRATULATIONS!"); // Player 2 wins
                 break;
             default: System.out.println("Ups! Something went wrong!"); // default statement.
         }

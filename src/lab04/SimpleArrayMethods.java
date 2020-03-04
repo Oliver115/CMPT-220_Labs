@@ -14,7 +14,7 @@ public class SimpleArrayMethods {
         System.out.println("This program will demonstrate examples of one dimensional array methods");
         System.out.println("Enter '10' numbers for the array: ");
         for (int i = 0; i < 10; i++) {
-            array[i] = input.nextInt();
+            array[i] = input.nextInt(); // Get '10' numbers from the user.
             sum += array[i];
         }
         System.out.println("The array is: " + Arrays.toString(array) + "\n");
@@ -34,7 +34,7 @@ public class SimpleArrayMethods {
         for (int i = 0; i < list.length; i++) {
             int evenOrNot = (list[i] % 2);
             if (evenOrNot == 0) {
-                amountOfEvens += 1;
+                amountOfEvens += 1; // counts the amount of even numbers in the array/
             }
         }
         return amountOfEvens;
@@ -84,7 +84,7 @@ public class SimpleArrayMethods {
         int largestNum = 0;
         for (int i = 0; i < list.length; i++) {
             if (list[i] > largestNum) {
-                largestNum = list[i];
+                largestNum = list[i]; // Keeps the largest number in the array
             }
         }
         return largestNum;
@@ -99,7 +99,7 @@ public class SimpleArrayMethods {
         int smallestNum = list[0];
         for (int i = 0; i < list.length; i++) {
             if (list[i] < smallestNum) {
-                smallestNum = list[i];
+                smallestNum = list[i]; // Keeps the smallest number of the array.
             }
         }
         return smallestNum;
