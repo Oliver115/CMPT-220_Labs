@@ -5,17 +5,14 @@ public class Circle {
     private double radius;
     private double area;
 
-    Circle(double radius) {
-        this.radius = radius;
+    Circle() {
     }
 
+    Circle(double radius) { this.radius = radius; }
+
     // Radius
-    double getRadius() {
-        return this.radius;
-    }
-    void setRadius(double radius) {
-        this.radius = radius;
-    }
+    double getRadius() { return this.radius; }
+    void setRadius(double radius) { this.radius = radius; }
 
     // Area
     private void setArea() {

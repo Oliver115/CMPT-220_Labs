@@ -5,6 +5,9 @@ public class Rectangle {
     private double height;
     private double area;
 
+    Rectangle() {
+    }
+
     Rectangle(double height, double length ) {
         this.height = height;
         this.length = length;
