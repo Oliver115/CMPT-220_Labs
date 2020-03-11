@@ -2,6 +2,8 @@
 // Oliver Wilson
 
 package lab04;
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Scanner;
 
 public class TicTacToe {
@@ -48,6 +50,7 @@ public class TicTacToe {
      * @param board = current game board.
      * @return an array of size 2 that contains if winner exists in [1] and what player won or if a draw exists in [0].
      */
+    @NotNull
     private static String[] isThereFreeSlots(String[][] board) {
         String[] returnWinner = new String[2]; // Create new array that holds if a player won, if so, whom.
         returnWinner[1] = "true"; // Initial value is 'true' because there are slots available.
@@ -67,7 +70,7 @@ public class TicTacToe {
         }
         // Game is a Draw.
         // If there are no more slots available and no player has won. The game is a draw.
-        else if (checkIfSlotsAvailable(board) < 1) {
+        else if (checkIfSlotsAvailable(board) < 2) {
             returnWinner[0] = "0"; // No player has won. Value is assigned '0'.
             returnWinner[1] = "false"; // There are no more slots available.
         }
@@ -153,7 +156,7 @@ public class TicTacToe {
      * @param playerSign = String sign that is used to identify player.
      * @return Boolean value that describes if winner was found in diagonals.
      */
-    private static boolean checkDiagonals(String[][] board, String playerSign) {
+    private static boolean checkDiagonals(@NotNull String[][] board, String playerSign) {
         boolean doesWinnerExist = false; // before method checks for winner, no winner exists.
 
             // Check for winner in diagonals

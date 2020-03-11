@@ -2,6 +2,8 @@
 // Oliver Wilson
 
 package lab03;
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Scanner;
 
 public class RockPaperScissors {
@@ -68,7 +70,8 @@ public class RockPaperScissors {
      *
      * @return String, stating Win, Draw, or Lose.
      */
-    public static String calculateWinner (String userChoice, String randomChoice) {
+    @NotNull
+    public static String calculateWinner (@NotNull String userChoice, String randomChoice) {
         // Cases for user to win
         if (userChoice.equals("rock") && randomChoice.equals("scissors"))
             return "point awarded to user";
