@@ -41,6 +41,7 @@ public class Grader {
     public void setFile(File file) throws FileNotFoundException {
         if (file.exists()) {
             System.out.println(file + " -> File exists");
+            fileO = file;
         }
         else {
             throw new FileNotFoundException(String.valueOf(file));
@@ -51,6 +52,7 @@ public class Grader {
         File localFile = new File(path);
         if (localFile.exists()) {
             System.out.println(path + " -> File exists");
+            fileO = localFile;
         }
         else {
             throw new FileNotFoundException(String.valueOf(localFile));
